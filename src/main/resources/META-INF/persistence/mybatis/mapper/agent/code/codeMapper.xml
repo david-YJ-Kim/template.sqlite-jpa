@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.plexter.sellter.agent.code.mapper.CodeMapper">
+
+    <!-- INSERT -->
+    <insert id="saveSltrLcCodeDef" parameterType="com.dk.template.sqlitejpa.domain.code.vo.SltrLcCodeDefVO">
+        INSERT INTO SLTR_LC_CODE_DEF
+        (OBJ_ID, CODE_CLASS_ID, CODE_ID, KOR_CODE_NAME, ENG_CODE_NAME, USE_YN, DESCRIPT,
+         CREATE_DATE, CREATE_USER_ID, UPDATE_DATE, UPDATE_USER_ID)
+        VALUES(#{OBJ_ID}, #{CODE_CLASS_ID}, #{CODE_ID}, #{KOR_CODE_NAME}, #{ENG_CODE_NAME}, #{USE_YN}, #{DESCRIPT},
+               CURRENT_TIMESTAMP, #{CREATE_USER_ID}, CURRENT_TIMESTAMP, #{UPDATE_USER_ID});
+
+    </insert>
+
+
+    <!-- UPDATE -->
+    <update id="updateSltrLcCodeDef" parameterType="com.dk.template.sqlitejpa.domain.code.vo.SltrLcCodeDefVO">
+        UPDATE SLTR_LC_CODE_DEF
+        SET KOR_CODE_NAME=#{KOR_CODE_NAME}, ENG_CODE_NAME=#{ENG_CODE_NAME}, USE_YN=#{USE_YN}, DESCRIPT=#{DESCRIPT}, UPDATE_DATE=CURRENT_TIMESTAMP, UPDATE_USER_ID=#{UPDATE_USER_ID}
+        WHERE OBJ_ID=#{OBJ_ID};
+
+    </update>
+
+
+    <!-- DELETE -->
+    <delete id="deleteSltrLcCodeDefById" parameterType="String">
+        DELETE FROM SLTR_LC_CODE_DEF
+        WHERE OBJ_ID=#{OBJ_ID};
+
+    </delete>
+
+    <!-- DELETE -->
+    <select id="getSltrLcCodeDefById" parameterType="String" resultType="com.dk.template.sqlitejpa.domain.code.vo.SltrLcCodeDefVO">
+        SELECT * FROM SLTR_LC_CODE_DEF
+        WHERE OBJ_ID=#{OBJ_ID};
+
+    </select>
+
+</mapper>

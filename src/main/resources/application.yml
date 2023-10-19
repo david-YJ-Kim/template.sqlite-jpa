@@ -1,0 +1,15 @@
+mybatis:
+  mapper-locations: classpath*:META-INF/persistence/mybatis/mapper/**/*.xml
+  type-aliases-package: com.dk.template.sqlitejpa.domain.**.vo
+
+spring:
+  jpa:
+    database-platform: com.dk.template.sqlitejpa.SQLDialect
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:sqlite:sqlitesample.db
+    driver-class-name: org.sqlite.JDBC
+    username: admin
+    password: admin
