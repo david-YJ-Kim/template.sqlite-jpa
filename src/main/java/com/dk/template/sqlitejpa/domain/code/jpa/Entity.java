@@ -1,4 +1,4 @@
-package com.dk.template.sqlitejpa;
+package com.dk.template.sqlitejpa.domain.code.jpa;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

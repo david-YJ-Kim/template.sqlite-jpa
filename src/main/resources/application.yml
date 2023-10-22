@@ -1,3 +1,6 @@
+server:
+  port: 8088
+
 mybatis:
   mapper-locations: classpath*:META-INF/persistence/mybatis/mapper/**/*.xml
   type-aliases-package: com.dk.template.sqlitejpa.domain.**.vo
@@ -13,3 +16,4 @@ spring:
     driver-class-name: org.sqlite.JDBC
     username: admin
     password: admin
+    initialization-mode: always
