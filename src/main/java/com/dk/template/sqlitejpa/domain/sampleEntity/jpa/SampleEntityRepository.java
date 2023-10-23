@@ -1,4 +1,4 @@
-package com.dk.template.sqlitejpa.domain.code.jpa;
+package com.dk.template.sqlitejpa.domain.sampleEntity.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package com.dk.template.sqlitejpa.domain.code.jpa.dto;
+package com.dk.template.sqlitejpa.domain.sampleEntity.dto;
 
 public interface CommonDto {
     public Object toEntity();
