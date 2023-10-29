@@ -1,0 +1,18 @@
+### Send POST request with json body
+POST http://localhost:8088/test
+Content-Type: application/json
+
+{
+  "sampleEntityMessage": "EntityMessage",
+  "sampleEntityContent": "EntityContent"
+}
+
+
+### GET request with a header
+GET http://localhost:8088/getAllMybatis
+Accept: application/json
+
+
+### GET request with a header
+GET http://localhost:8088/getAllJpa
+Accept: application/json

@@ -14,4 +14,13 @@ public class SampleEntityResponseDto {
         this.sampleEntityMessage = entity.getSampleEntityMessage();
         this.sampleEntityContent = entity.getSampleEntityContent();
     }
+
+    @Override
+    public String toString() {
+        return "SampleEntityResponseDto{" +
+                "Id=" + Id +
+                ", sampleEntityMessage='" + sampleEntityMessage + '\'' +
+                ", sampleEntityContent='" + sampleEntityContent + '\'' +
+                '}';
+    }
 }

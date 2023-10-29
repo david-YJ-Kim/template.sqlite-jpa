@@ -4,9 +4,9 @@
 
 
     <!-- DELETE -->
-    <select id="getSampleEntities" resultType="com.dk.template.sqlitejpa.domain.sampleEntity.jpa.SampleEntity">
-        SELECT * FROM SAMPLE_ENTITY;
-
+    <select id="getSampleEntities" resultType="com.dk.template.sqlitejpa.domain.sampleEntity.dao.SampleEntityResponseDao">
+        SELECT * FROM SAMPLE_ENTITY
     </select>
+
 
 </mapper>

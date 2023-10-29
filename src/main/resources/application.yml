@@ -3,7 +3,10 @@ server:
 
 mybatis:
   mapper-locations: classpath*:META-INF/persistence/mybatis/mapper/**/*.xml
-  type-aliases-package: com.dk.template.sqlitejpa.domain.**.vo
+  type-aliases-package: com.dk.template.sqlitejpa.domain.**.dao
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
 
 spring:
   jpa:

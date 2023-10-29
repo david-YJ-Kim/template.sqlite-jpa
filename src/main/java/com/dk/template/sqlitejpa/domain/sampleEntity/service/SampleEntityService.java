@@ -1,5 +1,6 @@
 package com.dk.template.sqlitejpa.domain.sampleEntity.service;
 
+import com.dk.template.sqlitejpa.domain.sampleEntity.dao.SampleEntityResponseDao;
 import com.dk.template.sqlitejpa.domain.sampleEntity.dto.SampleEntityResponseDto;
 import com.dk.template.sqlitejpa.domain.sampleEntity.jpa.SampleEntity;
 import com.dk.template.sqlitejpa.domain.sampleEntity.jpa.SampleEntityRepository;
@@ -23,8 +24,12 @@ public class SampleEntityService {
     }
 
 
-    public List<SampleEntity> getAllResponse(){
+    public List<SampleEntityResponseDao> getAllResponse(){
         return mapper.getSampleEntities();
+    }
+
+    public List<SampleEntity> getAllResponseJpa(){
+        return sampleEntityRepository.findAll();
     }
 
 

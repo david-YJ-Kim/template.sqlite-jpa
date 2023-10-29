@@ -1,5 +1,6 @@
 package com.dk.template.sqlitejpa.rest;
 
+import com.dk.template.sqlitejpa.domain.sampleEntity.dao.SampleEntityResponseDao;
 import com.dk.template.sqlitejpa.domain.sampleEntity.dto.SampleEntityResponseDto;
 import com.dk.template.sqlitejpa.domain.sampleEntity.dto.SampleEntitySaveRequestDto;
 import com.dk.template.sqlitejpa.domain.sampleEntity.jpa.SampleEntity;
@@ -25,7 +26,18 @@ public class SampleEntityController {
         log.info(requestDto.toString());
         sampleEntityService.save(requestDto);
 
-        List<SampleEntity> allSampleEntityResponse = sampleEntityService.getAllResponse();
+        List<SampleEntityResponseDao> allSampleEntityResponse = sampleEntityService.getAllResponse();
+
         log.info(allSampleEntityResponse.toString());
+    }
+
+    @RequestMapping(value = "/getAllMybatis", method = RequestMethod.GET)
+    public List<SampleEntityResponseDao> getAllEntityMybatis(){
+        return sampleEntityService.getAllResponse();
+    }
+
+    @RequestMapping(value = "/getAllJpa", method = RequestMethod.GET)
+    public List<SampleEntity> getAllEntityJpa(){
+        return sampleEntityService.getAllResponseJpa();
     }
 }
