@@ -1,0 +1,22 @@
+### https://docs.spring.io/spring-boot/docs/current/actuator-api/htmlsingle/#overview
+
+### Health Check
+GET http://localhost:8088/actuator/health
+Accept: application/json
+
+### Metrics
+GET http://localhost:8088/actuator/metrics
+Accept: application/json
+
+
+### Shutdown
+POST http://localhost:8088/actuator/shutdown
+Content-Type: application/json
+
+{
+  "message": "content"
+}
+<> 2023-10-29T222053.404.json
+<> 2023-10-29T222023.200.json
+<> 2023-10-29T222005.200.json
+<> 2023-10-29T221934.404.json
